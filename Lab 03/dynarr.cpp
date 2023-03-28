@@ -23,5 +23,3 @@ void dynArr<ItemType>::setValue(int index, ItemType value)
 {
     data[index] = value;
 }
-template class dynArr<int>;
-template class dynArr<double>;
