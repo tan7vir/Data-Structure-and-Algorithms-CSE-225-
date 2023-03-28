@@ -1,17 +1,16 @@
-// For Task 1 and 2
+// For Task 3
 #ifndef DYNARR_H_INCLUDED
 #define DYNARR_H_INCLUDED
 class dynArr
 {
 private:
-    int *data;
-    int size;
+    int **data;
+    int row, column;
 public:
     dynArr();
-    dynArr(int);
+    dynArr(int, int);
     ~dynArr();
-    void setValue(int, int);
-    int getValue(int);
-    void allocate(int);
+    void setValue(int, int, int);
+    int getValue(int, int);
 };
 #endif // DYNARR_H_INCLUDED

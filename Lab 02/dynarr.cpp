@@ -1,38 +1,33 @@
-// For Task 1 and 2
+// For Task 3
 #include "dynarr.h"
 #include <iostream>
 using namespace std;
 dynArr::dynArr()
 {
     data = NULL;
-    size = 0;
+    row = column = 0;
 }
-dynArr::dynArr(int s)
+dynArr::dynArr(int r, int c)
 {
-    data = new int[s];
-    size = s;
+    data = new int*[r];
+    for ( int i = 0; i < r; i++) {
+        data[i] = new int[c];
+    }
+    row = r;
+    column = c;
 }
 dynArr::~dynArr()
 {
-    delete [] data;
-}
-int dynArr::getValue(int index)
-{
-    return data[index];
-}
-void dynArr::setValue(int index, int value)
-{
-    data[index] = value;
-}
-void dynArr::allocate(int s) {
-    int *temp = new int[s];
-    int limit = ( s < size) ? s : size;
-
-    for ( int i = 0; i < limit; i++) {
-         temp[i] = data[i];
+    for ( int i = 0; i < row; i++ ) {
+        delete data[i];
     }
-    size = s;
     delete [] data;
-    data = temp;
-    temp = NULL;
+}
+int dynArr::getValue(int r, int c)
+{
+    return data[r][c];
+}
+void dynArr::setValue(int r, int c, int value)
+{
+    data[r][c] = value;
 }

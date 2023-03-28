@@ -1,35 +1,29 @@
-// For Task 1 and 2
+// For Task 3
 #include <iostream>
 #include "dynarr.h"
 using namespace std;
 
 int main()
 {
-    // Task 1.1
-    dynArr object1(), object2(5);
+    // Task 3
+    cout << "Enter row and column number: ";
+    int row, column;
+    cin >> row >> column;
+    dynArr object1(row, column);
+    cout << "Enter the values of the array: ";
 
-    // Task 1.2
-    cout << "Enter 5 int value: ";
-    for ( int i = 0; i < 5; i++ ) {
-        int temp;
-        cin >> temp;
-        object2.setValue (i, temp);
-    }
+    for ( int i = 0; i < row; i++) {
+        for ( int j = 0; j < column; j++) {
+            int temp; cin >> temp;
+            object1.setValue (i, j, temp);
+        }
+     }
 
-    // Task 1.3
-    cout << "The values are: ";
-    for ( int i = 0; i < 5; i++ ) {
-        cout << object2.getValue (i) << " " ;
-    }
+    for ( int i = 0; i < row; i++) {
+        for ( int j = 0; j < column; j++) {
+            cout << object1.getValue(i, j) << " ";
+        } cout << endl;
+     }
 
-    // Task 2
-    cout << "\nEnter new size of the array: ";
-    int s;
-    cin >> s;
-    object2.allocate(s);
-    cout << "Values of new array: ";
-    for ( int i = 0; i < s; i++ ) {
-        cout << object2.getValue (i) << " " ;
-    }
     return 0;
 }
