@@ -27,10 +27,10 @@ void printStack2 (StackType<ItemType> s) {
     if (!(s.IsEmpty())) {
         ItemType a = s.Top();
         s.Pop();
-        printStack(s);
+        printStack2(s);
         cout << a << " ";
     }
-    cout << endl;
+    
 }
 
 template <class ItemType>
