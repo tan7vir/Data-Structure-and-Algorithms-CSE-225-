@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1686041539 source:c:\users\lib-608\tan_vir\main.cpp
+	"graphtype.h"
+	<iostream>
+	"heaptype.cpp"
+
+1686035055 source:c:\users\lib-608\tan_vir\quetype.cpp
+	"quetype.h"
+
+1686035015 c:\users\lib-608\tan_vir\quetype.h
+
+1686034889 source:c:\users\lib-608\tan_vir\stacktype.cpp
+	"StackType.h"
+
+1686034834 c:\users\lib-608\tan_vir\stacktype.h
+
+1686041977 source:c:\users\lib-608\tan_vir\heaptype.cpp
+	"graphtype.h"
+	"stacktype.cpp"
+	"quetype.cpp"
+	<iostream>
+
+1686040875 c:\users\lib-608\tan_vir\graphtype.h
+	"stacktype.h"
+	"quetype.h"
+
+1686034889 c:\users\lib-608\tan_vir\stacktype.cpp
+	"StackType.h"
+
+1686035055 c:\users\lib-608\tan_vir\quetype.cpp
+	"quetype.h"
+
+1686041977 c:\users\lib-608\tan_vir\heaptype.cpp
+	"graphtype.h"
+	"stacktype.cpp"
+	"quetype.cpp"
+	<iostream>
+
